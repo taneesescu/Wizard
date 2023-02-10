@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FORM</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="wizard-section">
+		<div class="row no-gutters">
+			<div class="col-lg-2 col-md-2">
+			</div>
+			<div class="col-lg-8 col-md-8">
+				<div class="form-wizard">
+					<form action="" method="post" role="form">
+						<div class="form-wizard-header">
+							<h1 class="main-heading">GOALS</h1>
+							<ul class="list-unstyled form-wizard-steps clearfix">
+								<li class="active"><span>1</span></li>
+								<li><span>2</span></li>
+								<li><span>3</span></li>
+								<li><span>4</span></li>
+								<li><span>5</span></li>
+								<li><span>6</span></li>
+								<li><span>P</span></li>
+								<li><span>7</span></li>
+							</ul>
+						</div>
+						<fieldset class="wizard-fieldset show">
+							<h5 class="sub-heading">Let's get you started<br> on your financial goals. Ready?</h5>
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="fname">
+								<label for="fname" class="wizard-form-text-label">First Name*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="lname">
+								<label for="lname" class="wizard-form-text-label">Last Name*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-next-btn float-center">Next</a>
+							</div>
+							<label style="font-style: italic;">
+								(don’t worry, this is a simple quick 6-step 60-second process – nothing complicated!)
+							</label>
+						</fieldset>	
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading"><label id="firstname"></label>, what is your ANNUAL passive income goal
+								that will cover your living expenses?</h5>
+							<div class="form-group">
+								<input type="text" min="0" onkeypress="return isNumber(event)" class="form-control wizard-required" id="annualincomegoal">
+								<label for="annualincomegoal" class="wizard-form-text-label">$60,000</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>	
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">In how many years would you like to accomplish this passive income goal?</h5>
+							<div class="form-group">
+								<input type="text" min="0"  onkeypress="return isNumber(event)" class="form-control wizard-required" id="years" max="100">
+								<label for="years" class="wizard-form-text-label">10</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>	
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">Help us get to know you! How old are you?</h5>
+							<div class="form-group">
+								<input type="text" min="0" onkeypress="return isNumber(event)" class="form-control wizard-required" id="age" max="100">
+								<label for="age" class="wizard-form-text-label">age</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>	
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">In order to find you alternative solutions, what is a MONTHLY amount you can contribute to an investment?</h5>
+							<h1 class="h1-subheading">This could be from a combination of discretionary income, rental income, dividends, savings, non-performing assets etc. </h5>
+							<div class="form-group">
+								<input type="text" min="0" onkeypress="return isNumber(event)" class="form-control wizard-required" id="monthlyamount" >
+								<label for="monthlyamount" class="wizard-form-text-label">$1500</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+							<label style="font-style: italic;">
+								(we recommend $1000 per month or more)
+							</label>
+						</fieldset>	
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">What email should we send your customized report to?</h5>
+							<div class="form-group">
+								<input type="email" class="form-control wizard-required" id="email" required>
+								<label for="email" class="wizard-form-text-label">Email</label>
+								<div class="wizard-form-error" id="emailValdiation"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">PREVIEW</h5>
+							<div class="form-group">
+								<table class="table table-bordered">
+									<thead>
+									  <tr>
+										<th scope="col">#</th>
+										<th scope="col" style="text-align: left;">Input Field</th>
+										<th scope="col" style="text-align: left;">Values</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row">1</th>
+										<td style="text-align: left;">Full Name</td>
+										<td style="text-align: left;" id="tbl_fullName"></td>
+									  </tr>
+									  <tr>
+										<th scope="row">2</th>
+										<td style="text-align: left;">Your ANNUAL passive income goal</td>
+										<td style="text-align: left;" id="tbl_AnnualIncomeGoal"></td>
+									  </tr>
+									  <tr>
+										<th scope="row">3</th>
+										<td style="text-align: left;">Years would you like to accomplish this passive income goal</td>
+										<td style="text-align: left;" id="tbl_DesiredIncomeYear"></td>
+									  </tr>
+									  <tr>
+										<th scope="row">4</th>
+										<td style="text-align: left;">Age</td>
+										<td style="text-align: left;" id="tbl_Age"></td>
+									  </tr>
+									  <tr>
+										<th scope="row">5</th>
+										<td style="text-align: left;">MONTHLY amount you can contribute to an investment</td>
+										<td style="text-align: left;" id="tbl_MONTHLYinvestment"></td>
+									  </tr>
+									  <tr>
+										<th scope="row">6</th>
+										<td style="text-align: left;">Email</td>
+										<td style="text-align: left;" id="tbl_email"></td>
+									  </tr>
+									</tbody>
+								  </table>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>
+						<fieldset class="wizard-fieldset">
+							<h5 class="sub-heading">Boom! You’re done.</h5>
+							<div class="form-group">
+								<h1 class="h1-subheading">We’re cranking your customized report right now. Click on the button below when you’re ready to see it</h1>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard form-wizard-submit  float-center ">
+									<div class="spinner-border spinner-border-sm p-1 mr-2" id="spinner" role="status" style="display: none;">
+										<span class="sr-only">Loading...</span>
+									  </div>
+									Show Me My Report >>></a>
+							</div>
+						</fieldset>	
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2">
+			</div>
+		</div>
+	</section>
+<!-- partial -->
+<script src="/pdf-lib.min.js"></script>
+<script src="/download.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>

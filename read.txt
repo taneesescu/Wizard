@@ -1,0 +1,39 @@
+******** Some information About Tool **********
+
+fname = First Name
+lname = Last Name
+AnnualIncomeGoal =  what is your ANNUAL passive income goal that will cover your living expenses?
+Year = In how many years would you like to accomplish this passive income goal?
+Age = Help us get to know you! How old are you?
+COC_MonthlyAmountInvestment = To find your alternative solutions, enter a MONTHLY amount you can contribute to an investment.
+(this amount shows in "I am willing to invest _________________ hours per month to achieve this goal" in report.pdf  )
+Email = What email address would you like to receive your customized report at? ( Currently, isn't used anywhere)
+
+MoneyNeedsToHave = AnnualIncomeGoal / 0.08
+MoneyNeedsToRise = AnnualIncomeGoal / (8*50)
+Four_per (4%) = parseFloat(AnnualIncomeGoal/0.04)
+Three_per (3%)= parseFloat(AnnualIncomeGoal/0.03)
+doorNeeded = (AnnualIncomeGoal/12/150);
+doorNeededHigher = (AnnualIncomeGoal/12/200);
+
+
+Text Format
+I can use "en-us" currency format for showing AnnualIncomeGoal, COC_MonthlyAmountInvestment, 4% Rule, 3% Rule,MoneyNeedsToHave, MoneyNeedsToRise Also Apply Email Validation
+
+
+API - I can post 
+ contribution = COC_MonthlyAmountInvestment
+ desiredIncome = AnnualIncomeGoal/12
+in the API endpoint.
+
+Add Preview details page at 6 steps in the wizard to confirm user input information.
+
+
+The downloaded Report PDF name will be bound with User Full Name
+
+**IMP: 
+Please check And Test Fully this tool If you have any changes or need to be updated, just contact me after that test, then just inform me about what I will update and correct if any issues have.
+
+
+Regards
+Thank you
