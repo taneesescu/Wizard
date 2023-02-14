@@ -242,7 +242,8 @@ jQuery(document).ready(function() {
 		
 		}).catch((value) => {
 			console.log('Something went wrong')
-		})
+		});
+		window.location.href='[url to landing page]';
 	});
 
 	// focus on input field check empty or not
