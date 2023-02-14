@@ -173,7 +173,7 @@ jQuery(document).ready(function() {
 		const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
 		async function modifyPdf() {
 		// Fetch an existing PDF document
-		const url = 'CustomReportv3.pdf'
+		const url = 'https://rawcdn.githack.com/taneesescu/Wizard/094980f018f292aa814cdf3d9e83349c85797317/CustomReportv3.pdf'
 			const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 		const pdfDoc = await PDFDocument.load(existingPdfBytes)
 		const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
